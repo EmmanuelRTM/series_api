@@ -10,6 +10,9 @@ import {
 import React from 'react';
 
 import Home from './components/Home';
+//import ListaSeries from './components/ListaSeries';
+import Description from './components/Description';
+import Seasons from './components/Seasons'
 
 function App() {
   return (
@@ -18,19 +21,14 @@ function App() {
       <Switch>
         {/**Adentro del switch siempre va al router */}
         
-{/*
-        <Route exact path="/about">
-          <About/>
+        <Route exact path="/serie/:idSerie">
+          <Description />
         </Route>
 
-        <Route exact path="/author/:idAuthor">
-          <Individual />
+        <Route exact path="/serie/:idSerie/seasons">
+          <Seasons />
         </Route>
 
-        <Route exact path="/form">
-          <FormularioContacto  agregarContacto={Home.addContacto}/>
-        
-</Route>*/}
 
         <Route exact path="/">
           {/**cuando entren al path "/" debe de puntar el componente Home */}
