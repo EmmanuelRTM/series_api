@@ -42,8 +42,17 @@ function Cast(){
     
 
     const RenderTable= (data) => {
-            
-        return console.log(data);
+        return (
+            data.map((data,i)=>{
+                return(
+                    <div key ={i} className="image-container">
+                        <img src={data.person.image.medium} alt="" className="image-view"></img>
+                        <h3>{data.person.name}</h3>
+                        <h5>Character: {data.character.name}</h5>
+                    </div>
+                );
+            })
+        )
     }
 
     return (
