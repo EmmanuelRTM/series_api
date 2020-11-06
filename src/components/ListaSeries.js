@@ -29,14 +29,6 @@ function ListaSeries({lista}) {
                         <p>
 
                         </p>
-                        
-                    
-
-                    
-                            {//Genres(data.show)}
-                            }
-                            {//Summary(data.show)}
-                            }
                 </div>
             )
         })

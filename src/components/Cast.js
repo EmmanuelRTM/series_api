@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import axios from 'axios'
 
-function Seasons(){
+function Cast(){
 
     const history = useHistory();
     const params= useParams();
@@ -12,7 +12,7 @@ function Seasons(){
     //const altLink="https://static.tvmaze.com/uploads/images/medium_portrait/237/592575.jpg";
 
     function getInformation(id_serie){
-            axios.get(URL_Serie+id_serie+"/episodes")
+            axios.get(URL_Serie+id_serie+"/cast")
                 .then((resp)=>{
                     console.log(resp.status)
                 if(resp.status === 200){
@@ -43,37 +43,7 @@ function Seasons(){
 
     const RenderTable= (data) => {
             
-        const showEpisodes = (episo)=>{
-            return(
-                episo.map((e,i)=>{   
-                    return (
-                        <tr key={i} className="located-Episode">
-                            <td>{e.season} X {e.number} : {e.name}</td>
-                            <td>{e.airdate}</td>
-                        </tr>
-                    )
-                })
-            )
-        }
-        const newHeaderofRow=()=>{
-            return (
-
-                <tr>
-                    <th scope="row">Episode</th>
-                    <th>Released date</th>
-                </tr>
-
-            )
-        }
-            return (
-                <table className="egt">
-                    <tbody>
-                            {newHeaderofRow()}
-                            {showEpisodes(data)}
-                    </tbody>
-                </table>
-
-            )
+        return console.log(data);
     }
 
     return (
@@ -89,4 +59,4 @@ function Seasons(){
     )
 }
 
-export default Seasons;
+export default Cast;

@@ -13,6 +13,7 @@ import Home from './components/Home';
 //import ListaSeries from './components/ListaSeries';
 import Description from './components/Description';
 import Seasons from './components/Seasons'
+import Cast from './components/Cast'
 
 function App() {
   return (
@@ -20,15 +21,17 @@ function App() {
       {/**switch me va a permitir identificar el url y pintar el componente adecuado */}
       <Switch>
         {/**Adentro del switch siempre va al router */}
-        
-        <Route exact path="/serie/:idSerie">
-          <Description />
+        <Route exact path="/serie/:idSerie/cast">
+          <Cast />
         </Route>
 
         <Route exact path="/serie/:idSerie/seasons">
           <Seasons />
         </Route>
 
+        <Route exact path="/serie/:idSerie">
+          <Description />
+        </Route>
 
         <Route exact path="/">
           {/**cuando entren al path "/" debe de puntar el componente Home */}

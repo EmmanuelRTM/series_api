@@ -26,7 +26,7 @@ function Searcher({addSearch}){
                 className="search-button"
                 onClick={onSubmitSearch}
                 //this.sendSearch() asi lo ejecutaria el padre
-            >Buscar</button>
+            >Search</button>
         </div>
     )
     

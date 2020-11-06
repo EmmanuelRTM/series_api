@@ -44,9 +44,9 @@ function Home({saludo}) {
 
     return (
         <div>
-            <h1>Este es el Home en funcion</h1>
+            <h1>Search your favorite serie ! </h1>
             <Searcher addSearch={agregarBusqueda}/>
-            {consultedSeries.length === 0 ? <h1>Loading...</h1> : <ListaSeries lista={consultedSeries} />}
+            {consultedSeries.length === 0 ? <h1> </h1> : <ListaSeries lista={consultedSeries} />}
 
 {//consultedSeries.length === 0 ? <h1>Loading...</h1> : <h1>{consultedSeries.length}</h1>}
 }

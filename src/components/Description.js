@@ -2,6 +2,7 @@ import React, {useState,useEffect}from 'react';
 import { useHistory } from 'react-router-dom';
 import {useParams} from 'react-router-dom';
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 function Description(){
 
@@ -73,7 +74,8 @@ function Description(){
 
     const RenderSerie = (data) => {
             
-            //const linkSerie = "/serie/"+data.show.id
+        const id_serie_url_season="/serie/"+data.id+"/seasons";
+        const id_serie_url_cast="/serie/"+data.id+"/cast"
             
             return(
                 <div key={data.id} className="located-Serie">
@@ -96,6 +98,12 @@ function Description(){
                         <p>
 
                         </p>
+                        
+                    <Link to={id_serie_url_season}>Episodes</Link>
+                    <Link to={id_serie_url_cast}>Cast</Link>
+                    <p>
+
+                    </p>
                 </div>
             )
     }
