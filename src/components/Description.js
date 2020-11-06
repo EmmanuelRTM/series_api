@@ -100,6 +100,7 @@ function Description(){
                         </p>
                         
                     <Link to={id_serie_url_season}>Episodes</Link>
+                    <p> </p>
                     <Link to={id_serie_url_cast}>Cast</Link>
                     <p>
 
